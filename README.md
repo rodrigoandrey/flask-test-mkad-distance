@@ -39,5 +39,8 @@ Installation with docker-compose
 - Run the follow command inside the folder where docker-compose.yml where located `docker-compose up --build`
 - Wait for the process to finish.
 - You can access through the address.(default: http://127.0.0.0)
+- Create a `.env` file in the `/myapp/` folder.
+  - SECRET_KEY=`CREATE_ONE`
+  - YOUR_ACCESS_KEY=`YOUR_API_KEY_HERE`
 
 
