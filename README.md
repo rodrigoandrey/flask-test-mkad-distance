@@ -3,11 +3,12 @@ Flask MKAD Distance Calculator
 
 ## This simple webapp was made for training purposes, *through a test*.
 
-Obs: is incomplete.
+Obs: 
 
-`Missing:
+    # is incomplete.
 
-.. code-block:: bash
+Missing:
+
     # Unit tests
     # Corner Cases
     # More 'Forms' validations
