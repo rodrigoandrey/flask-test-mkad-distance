@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+{% block title %}{{ tittle }}{% endblock %}
+{% block content %}
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-6 mt-3">
+                <form method="POST" action="">
+                    {{ form.csrf_token }}
+                    {{ form.hidden_tag() }}
+                    <fieldset class="form-group">
+                        <legend class="border-bottom mb-4">Type your Address</legend>
+                        <div class="form-group">
+                            {{ form.address.label(class="form-control-label") }}
+                            {% if form.address.errors %}
+                            {{ form.address(class="form-control form-control-lg is-invalid") }}
+                            <div class="invalid-feedback">
+                                {% for error in form.address.errors %}
+                                <span>{{ error }}</span>
+                                {% endfor %}
+                            </div>
+                            {% else %}
+                            {{ form.address(class="form-control form-control",
+                                placeholder="1600 Pennsylvania Ave" ) }}
+                            {% endif %}
+                        </div>
+                         <div class="form-group">
+                            {{ form.city.label(class="form-control-label") }}
+                            {% if form.city.errors %}
+                            {{ form.city(class="form-control form-control-lg is-invalid") }}
+                            <div class="invalid-feedback">
+                                {% for error in form.city.errors %}
+                                <span>{{ error }}</span>
+                                {% endfor %}
+                            </div>
+                            {% else %}
+                            {{ form.city(class="form-control form-control",
+                             placeholder="Washington DC") }}
+                            {% endif %}
+                        </div>
+                        <br>
+                    </fieldset>
+                    <div class="form-group">
+                        {{ form.submit(class="btn btn-secondary") }}
+                    </div>
+                </form>
+            </div>
+        </div>
+         <div class="row">
+            <div class="col-6 mt-3">
+                {% with messages = get_flashed_messages(with_categories=true) %}
+                {% if messages %}
+                {% for category, message in messages %}
+                <hr>
+                <div class="alert alert-{{ category }}">
+                    {{ message }}
+                </div>
+                <hr>
+                {% endfor %}
+                {% endif %}
+                {% endwith %}
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Head -->
+    {% include 'partials/_head.html' %}
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+<main>
+    <!-- Navbar -->
+    {% include 'partials/_navbar.html' %}
+<!-- Main Block -->
+    {% block content %}{% endblock %}
+<!-- Scripts -->
+    {% include 'partials/_scripts.html' %}
+
+</main>
+
+</body>
+</html>
