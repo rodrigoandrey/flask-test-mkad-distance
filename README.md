@@ -30,6 +30,7 @@ Installation
 - Create a `.env` file in the `/myapp/` folder.
   - SECRET_KEY=`CREATE_ONE`
   - YOUR_ACCESS_KEY=`YOUR_API_KEY_HERE`
+- Create a folder named `logs` inside "/myapp/" folder
 
 
 Installation with docker-compose
@@ -42,5 +43,4 @@ Installation with docker-compose
 - Create a `.env` file in the `/myapp/` folder.
   - SECRET_KEY=`CREATE_ONE`
   - YOUR_ACCESS_KEY=`YOUR_API_KEY_HERE`
-
-
+- Create a folder named `logs` in /myapp/
